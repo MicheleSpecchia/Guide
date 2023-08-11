@@ -1,0 +1,96 @@
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registrato con successo:', registration);
+            })
+            .catch((error) => {
+                console.log('Errore durante la registrazione del Service Worker:', error);
+            });
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ConsigliDiAnna</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Consigli di Anna</title>
+</head>
+
+<body>
+    <div id="sp">
+        <div class="navbar">
+
+
+           <ul><li onclick="showP('img/background.png');changeT('EVENTI:'); changeD('')">EVENTI </li></ul>
+           
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="name">ConsigliDiAnna</h1>
+                <p id="desc">Immergiti in un mondo di meraviglie sconosciute, dove ogni passo rivela panorami
+                    incantevoli e culture avvincenti: il viaggio non è solo un'esperienza, ma un abbraccio alle
+                    straordinarie bellezze della terra che ti aspettano.</p>
+            </div>
+            <div class="col">
+                <div class="card card1"
+                    onclick="showP('img/portomiggiano.png'); changeT('Porto Miggiano'); changeD('Situato sulla costa incantata del Salento, Porto Miggiano è un gioiello nascosto che incanta i sensi e abbraccia l anima con la sua bellezza mozzafiato. Quest angolo paradisiaco di costa italiana cattura l immaginazione con acque cristalline che viaggiano da sfumature turchesi a cobalto profondo, creando un dipinto vivente di serenità.')">
+                    <h5>Porto Miggiano</h5>
+
+                </div>
+                <div class="card card2"
+                    onclick="showP('img/castro.png'); changeT('Castro'); changeD('Castro, un armoniosa fusione tra il fascino storico e la bellezza mozzafiato del mare. Questo incantevole borgo marino, situato sulla costa del Salento, incanta i visitatori con un mix affascinante di tesori culturali e paesaggi costieri indimenticabili. Tappa obbligata Cala dell Acquaviva, una vera perla incastonata lungo la costa di Castro. Questa baia nascosta incanta con la sua bellezza intatta e il suo mare cristallino. Raggiungibile attraverso sentieri nella rigogliosa vegetazione mediterranea.')">
+                    <h5>Castro</h5>
+
+                </div>
+                <div class="card card3"
+                    onclick="showP('img/portocesareo.png'); changeT('Porto Cesareo'); changeD('Le spiagge di sabbia bianca si estendono come tappeti incantati, pronti a cullarti con la dolce melodia delle onde. L acqua cristallina lambisce la riva, invitandoti a immergerti in un mare Caraibico. Consiglio di godersi un aperitivo al tramonto al bar Principe fronte mare e una cena a base di pesce al ristornate Grecale.')">
+                    <h5>Porto Cesareo</h5>
+
+                </div>
+                <div class="card card4"
+                    onclick="showP('img/santacaterina.png'); changeT('Santa Caterina'); changeD('Affacciata sullo splendido Mar Ionio, cattura immediatamente il cuore con il suo panorama mozzafiato e la sua autenticità senza tempo. Le acque cristalline di Santa Caterina invitano a immergersi in un mondo di colori e sensazioni. Consiglio di trascorrere la giornata presso il lido bejaflor e di cenare o fare aperitivo al ristorante sul mare barrueco con la tradizionale pizza fritta.')">
+                    <h5>Santa Caterina</h5>
+
+                </div>
+                <div class="card card5"
+                    onclick="showP('img/isola.png'); changeT('Isola dei conigli (Porto Cesareo)'); changeD('Un angolo di paradiso nel cuore di Porto Cesareo, dove la natura si manifesta in tutta la sua maestosità e la serenità abbraccia l anima. Questo gioiello naturale incanta con il suo paesaggio incontaminato e il mare dalle sfumature di turchese che sembra uscito da un sogno.')">
+                    <h5>Isola dei Conigli</h5>
+
+                </div>
+                <div class="card card6"
+                    onclick="showP('img/selvaggio.png'); changeT('Porto Selvaggio'); changeD('Un paradiso nascosto lungo la costa ionica del Salento, dove la natura incontaminata e la bellezza selvaggia creano un atmosfera magica e unica. Questo angolo di terra incanta con le sue acque cristalline, le scogliere maestose e la vegetazione lussureggiante.')">
+                    <h5>Porto Selvaggio</h5>
+
+                </div>
+                <div class="card card7"
+                    onclick="showP('img/prosciutto.png'); changeT('Punta Prosciutto'); changeD('Famosa per le sue dune di sabbia, che creano un paesaggio suggestivo e unico. Questo ambiente naturale incontaminato ospita una ricca fauna e flora, regalando agli amanti della natura l opportunità di esplorare e scoprire angoli segreti di bellezza.')">
+                    <h5>Punta Prosciutto</h5>
+
+                </div>
+                <div class="card card8"
+                    onclick="showP('img/isidoro.png'); changeT('Sant Isidoro'); changeD('Piccolo borgo marino con lunghe spiaggie dorate. Consiglio aperitivo al tramonto sul mare presso lido dell ancora.')">
+                    <h5>Sant'Isidoro</h5>
+
+                </div>
+                <div class="card card9"
+                    onclick="showP('img/torre.png'); changeT('Torre San Giovanni'); changeD('Torre San Giovanni, un luogo di magia e storia sulla splendida costa ionica del Salento. Questo affascinante borgo marinaro incanta i visitatori con il suo mix unico di bellezza naturale e patrimonio culturale. Consiglio spiaggia Poseidone e aperitivo al tramonto da Vespera.')">
+                    <h5>Torre San Giovanni</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript">
+
+    </script>
+</body>
+
+</html>
