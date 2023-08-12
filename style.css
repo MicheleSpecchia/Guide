@@ -160,3 +160,19 @@ h5 {
     text-shadow: 0 0 15px #000;
     font-size: 8px;
 }
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        margin-left: 30px; /* Riduci il margine per evitare sovrapposizioni */
+    }
+
+    .col {
+        flex-basis: 100%; /* Occupa l'intera larghezza su schermi piccoli */
+        margin-left: 0; /* Rimuovi il margine laterale */
+        text-align: center;
+    }
+
+    .card {
+        width: 90%; /* Utilizza percentuali per la larghezza delle schede */
+    }
+}
