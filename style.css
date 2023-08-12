@@ -6,19 +6,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body,
+html {
+    height: 100%;
+}
+
 #sp {
-    padding: 5% 8%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url(img/background.png);
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
-    background-repeat: no-repeat;
+    padding: 5%;
 }
 
 
@@ -63,9 +67,8 @@ ul li {
 
 }
 
+
 .col {
-    flex-basis: 100%; /* Occupa l'intera larghezza su schermi piccoli */
-    margin: 0; 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -75,14 +78,16 @@ ul li {
 .col h1 {
     font-weight: 900;
     color: white;
-    font-size: 100px;
+    font-size: 6vw;
+    margin-bottom: 1rem;
 }
 
 p {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 3vw;
+    line-height: 1.5;
     font-weight: bold;
     color: white;
+    margin-bottom: 2rem;
 }
 
 button {
@@ -99,7 +104,7 @@ button {
 }
 
 .card {
-    width: 90%; /* Utilizza percentuali per la larghezza delle schede */
+    width: 80%;
     height: auto;
     border-radius: 10px;
     padding: 10px 15px;
@@ -109,6 +114,24 @@ button {
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
+}
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    .col h1 {
+        font-size: 10vw;
+    }
+
+    p {
+        font-size: 5vw;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
 
 .card1 {
