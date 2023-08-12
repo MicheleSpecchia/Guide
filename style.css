@@ -7,6 +7,7 @@
 }
 
 #sp {
+    padding: 5% 8%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,9 +64,8 @@ ul li {
 }
 
 .col {
-    flex-basis: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
+    flex-basis: 100%; /* Occupa l'intera larghezza su schermi piccoli */
+    margin: 0; 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -99,9 +99,8 @@ button {
 }
 
 .card {
-    width: 70%;
-    /* Utilizza percentuale per la larghezza delle schede */
-    max-height: 100%;
+    width: 90%; /* Utilizza percentuali per la larghezza delle schede */
+    height: auto;
     border-radius: 10px;
     padding: 10px 15px;
     box-sizing: border-box;
