@@ -1,96 +1,403 @@
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-            .then((registration) => {
-                console.log('Service Worker registrato con successo:', registration);
-            })
-            .catch((error) => {
-                console.log('Errore durante la registrazione del Service Worker:', error);
-            });
-    }
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>ConsigliDiAnna</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <title>Consigli di Anna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Consigli Di Anna</title>
 </head>
 
 <body>
-    <div id="sp">
-        <div class="navbar">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                Consigli Di Anna
+            </a>
 
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
 
-           <ul><li onclick="showP('img/background.png');changeT('EVENTI:'); changeD('')">EVENTI </li></ul>
-           
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Eventi</a>
+                    </li>
+                </ul>
 
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
 
-        </div>
-        <div class="row">
-            <div class="col">
-                <h1 id="name">ConsigliDiAnna</h1>
-                <p id="desc">Immergiti in un mondo di meraviglie sconosciute, dove ogni passo rivela panorami
-                    incantevoli e culture avvincenti: il viaggio non è solo un'esperienza, ma un abbraccio alle
-                    straordinarie bellezze della terra che ti aspettano.</p>
+                <img src="assets/img/nav-img.png" alt="" class="nav__img">
             </div>
-            <div class="col">
-                <div class="card card1"
-                    onclick="showP('img/portomiggiano.png'); changeT('Porto Miggiano'); changeD('Situato sulla costa incantata del Salento, Porto Miggiano è un gioiello nascosto che incanta i sensi e abbraccia l anima con la sua bellezza mozzafiato. Quest angolo paradisiaco di costa italiana cattura l immaginazione con acque cristalline che viaggiano da sfumature turchesi a cobalto profondo, creando un dipinto vivente di serenità.')">
-                    <h5>Porto Miggiano</h5>
 
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home container" id="home">
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- HOME SLIDER 1 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/cesareo.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">PORTO CESAREO </h1>
+                                <p class="home__description">Le spiagge di sabbia bianca si estendono come tappeti
+                                    incantati, pronti a cullarti con la dolce melodia delle onde. L acqua cristallina
+                                    lambisce la riva, invitandoti a immergerti in un mare Caraibico. Consiglio di
+                                    godersi un aperitivo al tramonto al bar Principe fronte mare e una cena a base di
+                                    pesce al ristornate Grecale.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/miggiano.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">PORTO MIGGIANO </h1>
+                                <p class="home__description">Situato sulla costa incantata del Salento, Porto Miggiano è
+                                    un gioiello nascosto che incanta i sensi e abbraccia l anima con la sua bellezza
+                                    mozzafiato. Quest angolo paradisiaco di costa italiana cattura l immaginazione con
+                                    acque cristalline che viaggiano da sfumature turchesi a cobalto profondo, creando un
+                                    dipinto vivente di serenità.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/castro.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">CASTRO</h1>
+                                <p class="home__description">Castro, un armoniosa fusione tra il fascino storico e la
+                                    bellezza mozzafiato del mare. Questo incantevole borgo marino, situato sulla costa
+                                    del Salento, incanta i visitatori con un mix affascinante di tesori culturali e
+                                    paesaggi costieri indimenticabili. Tappa obbligata Cala dell Acquaviva, una vera
+                                    perla incastonata lungo la costa di Castro. Questa baia nascosta incanta con la sua
+                                    bellezza intatta e il suo mare cristallino. Raggiungibile attraverso sentieri nella
+                                    rigogliosa vegetazione mediterranea.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/caterina.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">SANTA CATERINA </h1>
+                                <p class="home__description">Affacciata sullo splendido Mar Ionio, cattura
+                                    immediatamente il cuore con il suo panorama mozzafiato e la sua autenticità senza
+                                    tempo. Le acque cristalline di Santa Caterina invitano a immergersi in un mondo di
+                                    colori e sensazioni. Consiglio di trascorrere la giornata presso il lido bejaflor e
+                                    di cenare o fare aperitivo al ristorante sul mare barrueco con la tradizionale pizza
+                                    fritta.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/isola.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">ISOLA DEI CONIGLI</h1>
+                                <p class="home__description">Un angolo di paradiso nel cuore di Porto Cesareo, dove la
+                                    natura si manifesta in tutta la sua maestosità e la serenità abbraccia l anima.
+                                    Questo gioiello naturale incanta con il suo paesaggio incontaminato e il mare dalle
+                                    sfumature di turchese che sembra uscito da un sogno.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/selvaggio.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">PORTO SELVAGGIO</h1>
+                                <p class="home__description">Un paradiso nascosto lungo la costa ionica del Salento,
+                                    dove la natura incontaminata e la bellezza selvaggia creano un atmosfera magica e
+                                    unica. Questo angolo di terra incanta con le sue acque cristalline, le scogliere
+                                    maestose e la vegetazione lussureggiante.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/prociutto.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">PUNTA PROSCIUTTO</h1>
+                                <p class="home__description">Famosa per le sue dune di sabbia, che creano un paesaggio
+                                    suggestivo e unico. Questo ambiente naturale incontaminato ospita una ricca fauna e
+                                    flora, regalando agli amanti della natura l opportunità di esplorare e scoprire
+                                    angoli segreti di bellezza.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/isidoro.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">SANT'ISIDORO</h1>
+                                <p class="home__description">Piccolo borgo marino con lunghe spiaggie dorate. Consiglio
+                                    aperitivo al tramonto sul mare presso lido dell ancora.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/torre.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Salento</h4>
+                                    <span class="home__details-subtitle">Best Place</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#Ionio</h3>
+                                <h1 class="home__title">TORRE SAN GIOVANNI</h1>
+                                <p class="home__description">Torre San Giovanni, un luogo di magia e storia sulla
+                                    splendida costa ionica del Salento. Questo affascinante borgo marinaro incanta i
+                                    visitatori con il suo mix unico di bellezza naturale e patrimonio culturale.
+                                    Consiglio spiaggia Poseidone e aperitivo al tramonto da Vespera.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="card card2"
-                    onclick="showP('img/castro.png'); changeT('Castro'); changeD('Castro, un armoniosa fusione tra il fascino storico e la bellezza mozzafiato del mare. Questo incantevole borgo marino, situato sulla costa del Salento, incanta i visitatori con un mix affascinante di tesori culturali e paesaggi costieri indimenticabili. Tappa obbligata Cala dell Acquaviva, una vera perla incastonata lungo la costa di Castro. Questa baia nascosta incanta con la sua bellezza intatta e il suo mare cristallino. Raggiungibile attraverso sentieri nella rigogliosa vegetazione mediterranea.')">
-                    <h5>Castro</h5>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
+        <!--==================== CATEGORY ====================-->
+        <section class="section category">
+            <h2 class="section__title">Migliori Posti <br> Per il Tramonto</h2>
+
+            <div class="category__container container grid">
+                <div class="category__data">
+                    <img src="assets/img/km0.png" alt="" class="category__img">
+                    <h3 class="category__title">KM 0</h3>
+                    <p class="category__description">Chiosco allestito presso la scogliera della Montagna Spaccata.</p>
                 </div>
-                <div class="card card3"
-                    onclick="showP('img/portocesareo.png'); changeT('Porto Cesareo'); changeD('Le spiagge di sabbia bianca si estendono come tappeti incantati, pronti a cullarti con la dolce melodia delle onde. L acqua cristallina lambisce la riva, invitandoti a immergerti in un mare Caraibico. Consiglio di godersi un aperitivo al tramonto al bar Principe fronte mare e una cena a base di pesce al ristornate Grecale.')">
-                    <h5>Porto Cesareo</h5>
 
+                <div class="category__data">
+                    <img src="assets/img/isidoro.png" alt="" class="category__img">
+                    <h3 class="category__title">Sant'Isidoro</h3>
+                    <p class="category__description">Spiaggia che offre tramonti mozzafiato dove il rosso del cielo si
+                        fonde con il mare.</p>
                 </div>
-                <div class="card card4"
-                    onclick="showP('img/santacaterina.png'); changeT('Santa Caterina'); changeD('Affacciata sullo splendido Mar Ionio, cattura immediatamente il cuore con il suo panorama mozzafiato e la sua autenticità senza tempo. Le acque cristalline di Santa Caterina invitano a immergersi in un mondo di colori e sensazioni. Consiglio di trascorrere la giornata presso il lido bejaflor e di cenare o fare aperitivo al ristorante sul mare barrueco con la tradizionale pizza fritta.')">
-                    <h5>Santa Caterina</h5>
 
-                </div>
-                <div class="card card5"
-                    onclick="showP('img/isola.png'); changeT('Isola dei conigli (Porto Cesareo)'); changeD('Un angolo di paradiso nel cuore di Porto Cesareo, dove la natura si manifesta in tutta la sua maestosità e la serenità abbraccia l anima. Questo gioiello naturale incanta con il suo paesaggio incontaminato e il mare dalle sfumature di turchese che sembra uscito da un sogno.')">
-                    <h5>Isola dei Conigli</h5>
-
-                </div>
-                <div class="card card6"
-                    onclick="showP('img/selvaggio.png'); changeT('Porto Selvaggio'); changeD('Un paradiso nascosto lungo la costa ionica del Salento, dove la natura incontaminata e la bellezza selvaggia creano un atmosfera magica e unica. Questo angolo di terra incanta con le sue acque cristalline, le scogliere maestose e la vegetazione lussureggiante.')">
-                    <h5>Porto Selvaggio</h5>
-
-                </div>
-                <div class="card card7"
-                    onclick="showP('img/prosciutto.png'); changeT('Punta Prosciutto'); changeD('Famosa per le sue dune di sabbia, che creano un paesaggio suggestivo e unico. Questo ambiente naturale incontaminato ospita una ricca fauna e flora, regalando agli amanti della natura l opportunità di esplorare e scoprire angoli segreti di bellezza.')">
-                    <h5>Punta Prosciutto</h5>
-
-                </div>
-                <div class="card card8"
-                    onclick="showP('img/isidoro.png'); changeT('Sant Isidoro'); changeD('Piccolo borgo marino con lunghe spiaggie dorate. Consiglio aperitivo al tramonto sul mare presso lido dell ancora.')">
-                    <h5>Sant'Isidoro</h5>
-
-                </div>
-                <div class="card card9"
-                    onclick="showP('img/torre.png'); changeT('Torre San Giovanni'); changeD('Torre San Giovanni, un luogo di magia e storia sulla splendida costa ionica del Salento. Questo affascinante borgo marinaro incanta i visitatori con il suo mix unico di bellezza naturale e patrimonio culturale. Consiglio spiaggia Poseidone e aperitivo al tramonto da Vespera.')">
-                    <h5>Torre San Giovanni</h5>
-
+                <div class="category__data">
+                    <img src="assets/img/faro.png" alt="" class="category__img">
+                    <h3 class="category__title">Faro Punta Palacia</h3>
+                    <p class="category__description">Uno dei luoghi più suggestivi di questa terra. Qui sorge la prima
+                        alba d'Italia.</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <script src="script.js" type="text/javascript">
+        </section>
 
-    </script>
+        <!--==================== ABOUT ====================-->
+        <section class="section about" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">NOTTE DELLA TARANTA
+                        <p class="about__description">
+                            Come si sa, il Salento è la terra della Pizzica, un ballo antico, unico nel suo genere. La
+                            storia la data ai primi dell’ottocento durante il regno borbonico, mentre i più eruditi la
+                            danno a partire dall’anno mille. Dapprima usata per curare i pizzicati oggi è una danza
+                            folcloristica Salentina molto apprezzata.
+                            Mantenendo tutta la sua energia spirituale, col passare del tempo si è arricchita di
+                            sonorità e linguaggio, tanto da far fiorire numerosi gruppi di Pizzica. Durante l’estate
+                            salentina è possibile ammirare spettacoli di pizzica nelle sagre o nelle feste di paese, ma
+                            la massima espressione, di questa antica tradizione, la troviamo nella, ormai, famosissima
+                            Notte della Taranta, dove migliaia di persone si trovano ogni anno durante il mese di agosto
+                            per ballare e scatenarsi a ritmo di pizzica.
+                            Numerosi sono i paesi in cui si terrà ma consiglio la data del 17 agosto a Galatina, città
+                            del pasticciotto e della cultura salentina.
+                        </p>
+                </div>
+
+                <img src="assets/img/about-img.png" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!--==================== TRICK OR TREAT ====================-->
+        <section class="section trick" id="trick">
+            <h2 class="section__title">Altri eventi</h2>
+
+            <div class="trick__container container grid">
+                <div class="trick__content">
+                    <img src="assets/img/80.png" alt="" class="trick__img">
+                    <h3 class="trick__title">I Love '80&'90</h3>
+                    <span class="trick__subtitle">16/08 Galatina</span>
+                </div>
+
+                <div class="trick__content">
+                    <img src="assets/img/bianca.png" alt="" class="trick__img">
+                    <h3 class="trick__title">Notte Bianca</h3>
+                    <span class="trick__subtitle">12/08 Specchia</span>
+                </div>
+
+                <div class="trick__content">
+                    <img src="assets/img/oronzo.png" alt="" class="trick__img">
+                    <h3 class="trick__title">Sant'Oronzo</h3>
+                    <span class="trick__subtitle">Lecce</span>
+                </div>
+
+                <div class="trick__content">
+                    <img src="assets/img/ceramica.png" alt="" class="trick__img">
+                    <h3 class="trick__title">Mostra della Ceramica</h3>
+                    <span class="trick__subtitle">Cutrofiano</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section newsletter">
+            <div class="newsletter__container container">
+                <h2 class="section__title">Instagram</h2>
+                <p class="newsletter__description">
+                    Per altri contenuti date un'occhiata alla nostra pagina instagram:
+                    <a href="https://www.instagram.com/_casa_di_anna_/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt' ></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
