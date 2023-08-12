@@ -75,11 +75,11 @@ ul li {
 .col h1 {
     font-weight: 900;
     color: white;
-    font-size: 8vw;
+    font-size: 100px;
 }
 
 p {
-    font-size: 4vw;
+    font-size: 24px;
     line-height: 24px;
     font-weight: bold;
     color: white;
@@ -99,7 +99,7 @@ button {
 }
 
 .card {
-    width: 80%; /* Utilizza percentuali per la larghezza delle schede */
+    width: 90%; /* Utilizza percentuali per la larghezza delle schede */
     height: auto;
     border-radius: 10px;
     padding: 10px 15px;
@@ -162,7 +162,17 @@ h5 {
 }
 
 @media (max-width: 768px) {
+    .navbar ul li {
+        margin-left: 30px; /* Riduci il margine per evitare sovrapposizioni */
+    }
+
+    .col {
+        flex-basis: 100%; /* Occupa l'intera larghezza su schermi piccoli */
+        margin-left: 0; /* Rimuovi il margine laterale */
+        text-align: center;
+    }
+
     .card {
-        width: 90%;
+        width: 90%; /* Utilizza percentuali per la larghezza delle schede */
     }
 }
